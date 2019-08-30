@@ -1,27 +1,37 @@
+Dicas Prof. Bruno Maciel
+30/08/2019
+
 abra o terminal. Sempre que for pra executar algum comando, será iniciada a linha de comando com ">".
 
+-----------------------------------------------------------
 para saber o diretório atual no terminal digite
 
 >pwd
 
 ele retorna o diretório atual.
 
+-----------------------------------------------------------
 recomendo que crie um diretório chamado "repositorios" dentro da sua pasta de trabalho no linux. 
 
 >mkdir /home/nome-do-seu-usuario/repositorios/
 
 *é importante notar que nome-de-seu-usuario deve ser substituido pelo nome do seu usuário.
 
+-----------------------------------------------------------
 agora com o diretório criado, basta fazer uma cópia do repositório remoto na máquina local.
 
 >git clone https://github.com/brunom4ciel/facir
 
 criado o repositório na máquina local, basta incluir os arquivos dentro dele normalmente.
 
-para manter o repositório atualizado basta usar o comando:
+-----------------------------------------------------------
+para manter o repositório local atualizado basta usar o comando:
 
 >git checkout master
 
+ele vai fazer o download das novidades para sua máquina.
+
+-----------------------------------------------------------
 agora será preciso identificar seu usário para pode fazer o envio de dados para o github.
 
 >git config --global user.name "seu-nome-de-usuario"
@@ -29,13 +39,15 @@ agora será preciso identificar seu usário para pode fazer o envio de dados par
 
 *é importante notar que seu-nome e seu-email devem ser substituidos por seu nome e e-mail do usuário (um e-mail) da conta do github.
 
-para verificar esses dados na máquina atual basta usar os comandos:
+-----------------------------------------------------------
+para verificar esses dados na máquina local basta usar os comandos:
 
 >config --global user.nome
 >config --global user.email
 
 após cada comando será exibida na tela a informação desejada.
 
+-----------------------------------------------------------
 para enviar informações para o servidor será preciso outros comando. Primeiro para acessar o diretório no qual deseja-se fazer o envio dos dados, depois incluir as alterações que deseja realizar, seguidamente o comando commint é utilizado para fazer uma marcação do que seja enviar e você deve indicar com uma frase curta as alterações que está enviando ao servidor. Para fazer o envio do conteúdo é feito o push no qual o usuário precisa identifica-se com usuário e senha.
 
 >cd /home/nome-do-seu-usuario/repositorios/nome-do-seu-repositorio/
@@ -44,3 +56,5 @@ para enviar informações para o servidor será preciso outros comando. Primeiro
 >git push
 
 *é importante notar que nome-de-seu-repositorio deve ser substituido pelo nome do repositorio criado por você.
+
+-----------------------------------------------------------
