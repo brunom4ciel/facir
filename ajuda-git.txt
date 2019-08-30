@@ -63,7 +63,18 @@ para enviar informações para o servidor será preciso outros comando. Primeiro
 *é importante notar que nome-de-seu-repositorio deve ser substituido pelo nome do repositorio criado por você.
 
 *no comando "git add -A ." o ponto no final indica que vale para todos os diretório e subdiretórios
------------------------------------------------------------
 
+-----------------------------------------------------------
+para você atualizar o repositório local sobrescrevendo os dados locais com os dados remotos, seu:
+
+>git fetch
+>git reset --hard origin/master
+
+-----------------------------------------------------------
+tente também (OUTRO MODO) para atualizar seu repositório local com a mais nova versão, execute :
+
+>git pull
+
+-----------------------------------------------------------
 Outras instruções é possível encontrar em https://docs.gitlab.com/ee/gitlab-basics/start-using-git.html
 
