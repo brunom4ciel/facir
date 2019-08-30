@@ -1,0 +1,332 @@
+% 2017-01-27 - Bruno Iran Ferreira Maciel - bifm@cin.ufpe.br
+\documentclass[xcolor=table]{beamer}
+
+
+
+% \usepackage{thumbs-3}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+
+%\usepackage[ruled,titlenumbered,linesnumbered,lined,boxed,vlined]{algorithm2e}
+% \usepackage{algorithm,algpseudocode}
+
+
+% \usepackage[alf,abnt-emphasize=bf]{abntcite}
+% \usepackage{natbib}
+%\usepackage{bibentry}
+
+
+
+\usepackage{float}
+\floatplacement{table}{!htb}
+\floatplacement{figure}{!htb}\newcommand\mycommfont[1]{\footnotesize\ttfamily\textcolor{blue}{#1}}
+
+
+\definecolor{LightCyan}{rgb}{0.88,1,1}
+\definecolor{cadmiumyellow}{rgb}{1.0, 0.96, 0.0}
+
+\usepackage[export]{adjustbox}
+
+
+\usepackage{pdfpages} %para incluir pdf como páginas
+
+
+\usepackage[table]{xcolor}
+
+\usepackage{soul} % font riscada
+
+% Usado para modificar a fonte de todas as tabelas e centralizá-las
+\usepackage{etoolbox}
+\BeforeBeginEnvironment{tabularx}{\centering\scriptsize}
+\BeforeBeginEnvironment{tabular}{\centering\scriptsize}
+\usepackage{float}
+\floatplacement{table}{!htb}
+\floatplacement{figure}{!htb}
+
+
+
+\usepackage{tikz}
+\usetikzlibrary{shapes,backgrounds}
+
+% usando tema personalizado. 
+% arquivo beamer-cin-ufpe.sty deve estar no mesmo diretório do main.tex
+\usepackage{beamer-cin-ufpe}
+
+\usepackage[noredefwarn,acronym]{glossaries} %GLOSSÁRIO
+%
+
+
+%\hypersetup{pdfstartview={Fit},pdftitle={\@title},pdfsubject={cin-ufpe},pdfauthor={\@author}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% variáveis de usuário
+
+\input{custom}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% ----------------------------------------------------------
+% GLOSSÁRIO
+% ----------------------------------------------------------
+\glsnoexpandfields
+\makeglossaries
+\input{others/acronym}
+%\makeindex
+
+
+
+% \setbeamersize{text margin left=0.5em, text margin right=0.5em}
+% \setbeamertemplate{frametitle}{\color{black}\bfseries\insertframetitle\par\vskip-6pt\hrulefill \vspace*{-0.2cm}}
+
+% \newcommand\fontsizeSlide{\fontsize{16}{7.2}\selectfont}
+
+
+% \newcommand\FourQuad[1]{
+%     \vspace*{2cm}\hspace*{0.5cm}\begin{minipage}[b][.9\textheight][t]{.9\textwidth}\fontsizeSlide#1\end{minipage}\hfill
+    
+    
+%     % \colorbox{yellow}{\begin{minipage}[b][.40\textheight][t]{.49\textwidth}\fontsizeSlide#1\end{minipage}}\hfill
+%     % \begin{minipage}[b][.40\textheight][t]{.49\textwidth}#2\end{minipage}\\
+%     % \begin{minipage}[b][.40\textheight][t]{.49\textwidth}#3\end{minipage}\hfill
+%     % \begin{minipage}[b][.40\textheight][t]{.49\textwidth}#4\end{minipage}
+% }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+\usepackage{layout}
+
+
+\newcommand{\makepart}[1]{ % For convenience
+\part{Title of part #1} \frame{\partpage}
+\section{Section} \begin{frame} Section \end{frame}
+\subsection{Subsection} \begin{frame} Subsection \end{frame}
+\subsection{Subsection} \begin{frame} Subsection \end{frame}
+\section{Section} \begin{frame} Section \end{frame}
+}
+
+\usepackage{multicol}% Múltiplas colunas
+
+
+
+
+%-------------------------%
+%
+\usetikzlibrary{arrows, positioning, shapes.geometric}
+\tikzstyle{startstop} = [rectangle, rounded corners, minimum width=1cm, minimum height=0.5cm,text centered, draw=black, fill=none, text width=15mm]
+
+\tikzstyle{io} = [trapezium, trapezium left angle=70, trapezium right angle=110, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=none, text width=42mm]
+
+\tikzstyle{process} = [rectangle, minimum width=3cm, minimum height=0.5cm, text centered, draw=black, fill=none, text width=42mm]
+
+\tikzstyle{decision} = [diamond, minimum width=1cm, minimum height=0.3cm, text centered, draw=black, fill=none, text width=32mm]
+
+\tikzstyle{arrow} = [thick,->,>=stealth]
+\tikzstyle{nodestyle} = [near start]           % <--- added
+\tikzstyle{yesnode} = [nodestyle,xshift=1em]   % <--- added
+\tikzstyle{nonode} = [nodestyle,yshift=-1em]   % <--- added
+% \tikzset{fontscale/.style = {font=\relsize{#1}}}
+%---------------------------------------------------
+
+\usepackage{listings}
+
+
+\begin{document}
+
+%\printglossary%[type=\acronymtype,title={\listadesiglasname},nonumberlist]
+\input{others/glossaries}
+
+
+{
+\setbeamertemplate{footline}{} 
+\begin{frame}[t]
+	\maketitle
+\end{frame}
+}
+\addtocounter{framenumber}{-2}
+
+
+        % \bgroup
+        %     \vskip1\baselineskip
+        %     \fontsize{10}{18}\selectfont
+        %     \tableofcontents
+        %     \vskip0pt plus 1filll
+        %   \egroup
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+% {
+% \setbeamertemplate{footline}{} 
+% \setbeamertemplate{section in toc}[circle] 
+% \begin{frame}{Objetivo Principal}
+%     \begin{center}
+%     	\fontsize{16pt}{20.2}\selectfont{
+%     	Apresentar SQL Básica\\ \citep{2011:navathe}.% sobre Structure Query Language (SQL).
+%     	}\par
+%     	\begin{figure}[h]
+%         % \caption{A conexão indireta entre um usuário e um \gls{sgbd}}
+%         \centering%\vspace{1cm}
+%         \includegraphics[width=0.21\textwidth]{images/livro-bd1.jpeg}
+%         \end{figure}
+% 	\end{center}
+% \end{frame} 
+% }
+ 
+
+\setbeamerfont{section in toc}{size=\tiny}
+
+
+{
+\setbeamertemplate{footline}{} 
+\setbeamertemplate{section in toc}[circle]
+
+% remova as linhas abaixo se desejar colocar um sumário de todas as seções
+\begin{frame}[c,t]{Roteiro}
+\vspace*{0.5cm}
+\hspace*{0.5cm}
+   \begin{minipage}{\textwidth}
+    %   \tableofcontents%[pausesections]
+    
+    \begin{multicols}{2}
+    UNIDADE I\vspace*{0.5cm}
+
+    \tableofcontents[part=1]
+    
+    \columnbreak
+    UNIDADE II\vspace*{0.5cm}
+    
+    \tableofcontents[part=2]
+    \end{multicols}
+    
+    
+
+   \end{minipage}
+    % \hfill
+    % \parbox[t]{.95\textwidth}{
+    %   \begin{minipage}[c][0.75\textheight]{\textwidth}
+    %   \tableofcontents
+    %   \end{minipage}
+    % }
+\end{frame}
+
+}
+\addtocounter{framenumber}{-1}
+
+
+
+% \def\sectionname{}
+% \def\insertsectionnumber{}
+% \def\subsectionname{}
+% \def\insertsubsectionnumber{}
+
+% \AtBeginSection{\frame{\sectionpage}\addtocounter{framenumber}{-1}}
+% \AtBeginSubsection{\frame{\subsectionpage}\addtocounter{framenumber}{-1} }
+% \AtBeginSubsubsection{\frame{\subsubsectionpage}\addtocounter{framenumber}{-1} }
+
+
+
+%%%%%%%%%%%%%remover slides de seções
+
+% \AtBeginSection{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Inicio do documento
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+\input{slides}
+
+
+
+
+\setbeamertemplate{footline}[text line]{%
+
+}
+
+
+% {
+% \setbeamertemplate{headline}{}
+% \begin{frame}
+% \maketitle
+% \end{frame}
+% }
+
+\begin{frame}[c]
+  %\vspace*{9pt}
+  \titlepage
+\end{frame}
+
+%\bibliography{references}
+
+
+% \begin{frame}[t,allowframebreaks]
+% \frametitle{Referências}
+% \bibliography{references.bib}
+% \end{frame}
+
+% \begin{frame}[t, allowframebreaks]
+% %\frametitle{Referências}
+%\bibliographystyle{apalike}
+% \vspace{0.5cm}
+\bibliography{references}
+% \end{frame}
+
+\bibliographystyle{apalike}
+
+\setbeamertemplate{frametitle continuation}[from second]
+\setbeamercolor*{bibliography entry title}{fg=black}
+\setbeamercolor*{bibliography entry author}{fg=black}
+\setbeamercolor*{bibliography entry location}{fg=black}
+\setbeamercolor*{bibliography entry note}{fg=black}
+\setbeamertemplate{bibliography item}{}
+
+
+
+
+% --- O comando \allowframebreaks ---
+% Se o conteúdo não se encaixa em um quadro, a opção allowframebreaks instrui 
+% beamer para quebrá-lo automaticamente entre dois ou mais quadros,
+% mantendo o frametitle do primeiro quadro (dado como argumento) e acrescentando 
+% um número romano ou algo parecido na continuação.
+
+% \setbeamertemplate{bibliography entry title}{}
+% \setbeamertemplate{bibliography entry location}{}
+% \setbeamertemplate{bibliography entry note}{}
+%
+
+
+\newcommand\Fontvi{\fontsize{11.2}{7.2}\selectfont}
+% \setbeamertemplate{bibliography item}{fg = white, bg = cinColor}%[text]
+% \setbeamertemplate{bibliography title}{fg = white, bg = cinColor}%[text]
+% \bibliographystyle{amsalpha}
+
+
+% \setbeamertemplate{bibliography item}[text]
+% \bibliographystyle{IEEEtran}
+
+
+
+% \input{apendices/apendices.tex}
+
+  
+% \begin{frame}[allowframebreaks,noframenumbering]{Referências}
+% \Fontvi
+% \bibliography{references}
+% \end{frame}
+
+
+\end{document}
