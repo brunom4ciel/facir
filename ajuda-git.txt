@@ -76,5 +76,8 @@ tente também (OUTRO MODO) para atualizar seu repositório local com a mais nova
 >git pull
 
 -----------------------------------------------------------
-Outras instruções é possível encontrar em https://docs.gitlab.com/ee/gitlab-basics/start-using-git.html
+Outras instruções é possível encontrar em
 
+https://docs.gitlab.com/ee/gitlab-basics/start-using-git.html
+
+https://rogerdudler.github.io/git-guide/index.pt_BR.html

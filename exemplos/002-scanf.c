@@ -9,7 +9,7 @@ int main(){
     char sobrenome[10];//sobrenome da pessoa
     printf("saida de dados, digite seu nome: ");
     scanf("%s", nome); // entrada de dados
-    scanf("% *[^\n]% *c");// para limpar o buffer de entrada
+    scanf("%*[^\n]%*c");// para limpar o buffer de entrada, nao pode ter espacos dentro da string
     printf("saida de dados, digite seu sobrenome: ");
     scanf("%s", sobrenome);// entrada de dados
     printf("saida de dados na tela: bem vindo, %s %s\n", nome, sobrenome);
