@@ -24,7 +24,7 @@ para manter o repositório atualizado basta usar o comando:
 
 agora será preciso identificar seu usário para pode fazer o envio de dados para o github.
 
->git config --global user.name "seu-nome"
+>git config --global user.name "seu-nome-de-usuario"
 >git config --global user.email "seu-email"
 
 *é importante notar que seu-nome e seu-email devem ser substituidos por seu nome e e-mail do usuário (um e-mail) da conta do github.
@@ -36,11 +36,11 @@ para verificar esses dados na máquina atual basta usar os comandos:
 
 após cada comando será exibida na tela a informação desejada.
 
-para enviar informações para o servidor será preciso outros comando. Primeiro para acessar o diretório no qual deseja-se fazer o envio dos dados, depois incluir as alterações que deseja realizar, seguidamente o comando commint é utilizado para fazer uma marcação do que seja enviar e você deve indicar com uma frase curta as alterações que está enviando ao servidor. Para fazer o envio do conteúdo é feito oum push.
+para enviar informações para o servidor será preciso outros comando. Primeiro para acessar o diretório no qual deseja-se fazer o envio dos dados, depois incluir as alterações que deseja realizar, seguidamente o comando commint é utilizado para fazer uma marcação do que seja enviar e você deve indicar com uma frase curta as alterações que está enviando ao servidor. Para fazer o envio do conteúdo é feito o push no qual o usuário precisa identifica-se com usuário e senha.
 
 >cd /home/nome-do-seu-usuario/repositorios/nome-do-seu-repositorio/
 >git add -A .
->git commit -m 'commit message from terminal'
+>git commit -m 'instruções de uso do git'
 >git push
 
 *é importante notar que nome-de-seu-repositorio deve ser substituido pelo nome do repositorio criado por você.
