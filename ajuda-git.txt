@@ -32,6 +32,11 @@ para manter o repositório local atualizado basta usar o comando:
 ele vai fazer o download das novidades para sua máquina.
 
 -----------------------------------------------------------
+para ver as diferenças entre o repositorio local e remoto utilize a instrução:
+
+>git diff
+
+-----------------------------------------------------------
 agora será preciso identificar seu usário para pode fazer o envio de dados para o github.
 
 >git config --global user.name "seu-nome-de-usuario"
@@ -57,4 +62,8 @@ para enviar informações para o servidor será preciso outros comando. Primeiro
 
 *é importante notar que nome-de-seu-repositorio deve ser substituido pelo nome do repositorio criado por você.
 
+*no comando "git add -A ." o ponto no final indica que vale para todos os diretório e subdiretórios
 -----------------------------------------------------------
+
+Outras instruções é possível encontrar em https://docs.gitlab.com/ee/gitlab-basics/start-using-git.html
+
